@@ -3,14 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="images/IMG_1932.jpg" type="image/x-icon">
     <title>反復する近況報告</title>
     <link href="styles/test.css" rel="stylesheet"/>
   </head>
   <body>
     <header><!--全ページで共通のヘッダー-->
-      <h1>反復する近況報告</h1>
-      <img src="images/IMG_1932.jpg" alt="test" />
+      <h1>反復する近況報告<img src="images/IMG_1932.jpg" alt="test" /></h1>
     </header>
     <nav><!--あとでcssで加工する、メニューやパンくずリスト-->
       <ul>
@@ -18,12 +16,13 @@
         <li>自己紹介</li>
         <li>数学</li>
       </ul>
+      <p>最終更新：<time datetime="2026-08-12">2026年8月12日</time></p>
     </nav>
-    <p>最終更新：<time datetime="2026-08-12">2026年8月12日</time></p>
 
     <!--ここからがこのページに固有の内容-->
     <hr>
     <main>
+      <p><a href="test.pdf" download>このページのpdfをダウンロード</a></p>
       <article>
         <section>
           <h2>このサイトについて</h2>
@@ -31,15 +30,16 @@
             田嶋のwebサイトです。自己紹介、日記、数学のノート、哲学のノートなどを置きます。
           </p>
           <p>段落のテスト<br>このサイトの由来</p>
+          <p>なにかあれば<a title="連絡先" href="#contact">連絡先</a>から</p>
         </section>
 
         <section>
-          <h2>サイト案内</h2>
+          <h2 id="site-description">サイト案内</h2>
           <p>各ページをpdfとepub形式でダウンロードできます。</p>
           <p>ページのリスト：
             <ol>
               <li>
-                <a href="https://tajima27831.github.io/self-introduction.html" title="自己紹介">自己紹介</a>
+                <a href="self-introduction.html" title="自己紹介">自己紹介</a>
                 <ol>
                   <li>まえがき</li>
                   <li>経歴</li>
@@ -54,7 +54,7 @@
         </section>
 
         <section>
-          <h2>連絡先</h2>
+          <h2 id="contact">連絡先</h2>
           <p>連絡先情報があれば記載してください。</p>
         </section>
       </article>

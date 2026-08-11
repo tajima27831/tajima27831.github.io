@@ -6,9 +6,31 @@ h1 {
   padding: 20px 0;
   color: #00539f;
 }
+header {
+  margin-bottom: 10px;
+}
+header img {
+  height: 60px;
+}
+h1 {
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+nav ul {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+}
+nav li {
+  text-align: center;
+  flex: 1;
+}
 img {
   display: block;
-  margin: 0 auto;
+  width: auto;
   max-width: 30%;
 }
 p {
