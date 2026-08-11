@@ -3,52 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>近況報告</title>
+    <link rel="icon" href="images/IMG_1932.jpg" type="image/x-icon">
+    <title>反復する近況報告</title>
     <link href="styles/test.css" rel="stylesheet"/>
-    <!--
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-        line-height: 1.6;
-      }
-      h1 {
-        color: #333;
-        border-bottom: 2px solid #ccc;
-        padding-bottom: 10px;
-      }
-      .section {
-        margin: 20px 0;
-      }
-    </style>
-    -->
   </head>
   <body>
-    <h1>近況報告</h1>
-    <!--<img src="images/IMG_1932.jpg" alt="test" />-->
-
-    <div class="section">
-      <h2>このサイトについて</h2>
-      <p>
-        田嶋のwebサイトです。自己紹介、日記、数学のノート、哲学のノートなどを置きます。
-      </p>
-      <p>段落のテスト</p>
-    </div>
-
-    <h2>サイト案内</h2>
-    <p>各ページをpdfとepub形式でダウンロードできます。</p>
-    <p>ページのリスト：
-      <ol>
-        <li><a href="https://tajima27831.github.io/self-introduction.html">自己紹介</a></li>
+    <header><!--全ページで共通のヘッダー-->
+      <h1>反復する近況報告</h1>
+      <img src="images/IMG_1932.jpg" alt="test" />
+    </header>
+    <nav><!--あとでcssで加工する、メニューやパンくずリスト-->
+      <ul>
+        <li>トップページ</li>
+        <li>自己紹介</li>
         <li>数学</li>
-      </ol>
-    </p>
+      </ul>
+    </nav>
+    <p>最終更新：<time datetime="2026-08-12">2026年8月12日</time></p>
 
-    <div class="section">
-      <h2>連絡先</h2>
-      <p>連絡先情報があれば記載してください。</p>
-    </div>
+    <!--ここからがこのページに固有の内容-->
+    <hr>
+    <main>
+      <article>
+        <section>
+          <h2>このサイトについて</h2>
+          <p>
+            田嶋のwebサイトです。自己紹介、日記、数学のノート、哲学のノートなどを置きます。
+          </p>
+          <p>段落のテスト<br>このサイトの由来</p>
+        </section>
+
+        <section>
+          <h2>サイト案内</h2>
+          <p>各ページをpdfとepub形式でダウンロードできます。</p>
+          <p>ページのリスト：
+            <ol>
+              <li>
+                <a href="https://tajima27831.github.io/self-introduction.html" title="自己紹介">自己紹介</a>
+                <ol>
+                  <li>まえがき</li>
+                  <li>経歴</li>
+                  <li>基本的な世界観</li>
+                  <li>信念・感情・行動の合理的な分析</li>
+                  <li>不合理な行動の傾向</li>
+                </ol>
+              </li>
+              <li>数学</li>
+            </ol>
+          </p>
+        </section>
+
+        <section>
+          <h2>連絡先</h2>
+          <p>連絡先情報があれば記載してください。</p>
+        </section>
+      </article>
+    </main>
   </body>
 </html>

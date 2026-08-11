@@ -3,10 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="images/IMG_1932.jpg" type="image/x-icon" />
     <title>自己紹介</title>
+    <link href="styles/test.css" rel="stylesheet" />
   </head>
   <body>
-    <h1>自己紹介</h1>
-    test
+    <header>
+      <!--全ページで共通のヘッダー-->
+      <h1>自己紹介</h1>
+    </header>
+    <nav>
+      <!--あとでcssで加工する、メニューやパンくずリスト-->
+      <ul>
+        <li>トップページ</li>
+        <li>自己紹介</li>
+        <li>数学</li>
+      </ul>
+    </nav>
+    <p>最終更新：<time datetime="2026-08-12">2026年8月12日</time></p>
+
+    <!--ここからがこのページに固有の内容-->
+    <hr />
+    <main>
+      <article>
+        <section>
+          <h2>このページについて</h2>
+          <p>自己紹介を書きます</p>
+        </section>
+
+        <section>
+          <a href="#"><h2>まえがき</h2></a>
+          <a href="#"><h3>概要</h3></a>
+        </section>
+      </article>
+    </main>
   </body>
 </html>
