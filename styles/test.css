@@ -16,12 +16,12 @@ h1 {
   justify-content: center;
   gap: 20px;
 }
-nav ul {
+ul.header-banner {
   padding: 0;
   list-style-type: none;
   display: flex;
 }
-nav li {
+li.header-banner {
   text-align: center;
   flex: 1;
 }
