@@ -7,26 +7,34 @@
     <title>内向性・視野狭窄・詐病</title>
     <link href="styles/test.css" rel="stylesheet"/>
   </head>
+
   <body>
-    <header><!--全ページで共通のヘッダー-->
+    <header>
       <h1>内向性・視野狭窄・詐病</h1>
     </header>
-    <nav><!--あとでcssで加工する、メニューバナーやパンくずリスト-->
-      <ul class="header-banner">
+    <nav>
+      <!--<ul class="header-banner">
         <li class="header-banner">トップ</li>
         <li class="header-banner">自己紹介</li>
         <li class="header-banner">数学</li>
         <li class="header-banner">日記</li>
         <li class="header-banner">その他</li>
-      </ul>
+      </ul>-->
       <hr>
       <p>このページの最終更新：<time datetime="2026-08-12">2026年8月12日</time></p>
       <p>
         このページの目次：
         <ul>
-          <li>このサイトについて</li>
-          <li>更新履歴</li>
-          <li>連絡先</li>
+          <li>
+            <a title="このサイトについて" href="#h2-about">このサイトについて</a>
+            <ul>
+              <li><a title="このサイトの由来" href="#h3-origin">このサイトの由来</a></li>
+              <li><a title="総目次" href="#h3-contents">総目次</a></li>
+              <li><a title="技術的なこと" href="#h3-technical">技術的なこと</a></li>
+            </ul>
+          </li>
+          <li><a title="更新履歴" href="#h2-update">更新履歴</a></li>
+          <li><a title="連絡先" href="#h2-contact">連絡先</a></li>
         </ul>
       </p>
     </nav>
@@ -37,43 +45,56 @@
       <p><a href="test.pdf" download>このページのpdfをダウンロード</a></p>
       <article>
         <section>
-          <h2>このサイトについて</h2>
+          <h2 id="h2-about">このサイトについて</h2>
           <p>
-            田嶋(twitter@yoshino_no_no_n)のwebサイトです。すべて田嶋が書いています。<br>私自身についてと、私の考えたことについてと、私の行動したことについて書きます。
-            <br>
-            なにかあれば<a title="連絡先" href="#contact">連絡先</a>から。
+            田嶋(twitter@yoshino_no_no_n)のwebサイトです。すべて田嶋が書いています。
+            <br>私自身についてと、私の考えたことについてと、私の行動したことについて書きます。
+            <br>なにかあれば<a title="連絡先" href="#h2-contact">連絡先</a>から。
           </p>
           
-          <h3>サイト名の由来</h3>
+          <h3 id="h3-origin">このサイトの由来</h3>
           
-          <h3>総目次</h3>
+          <h3 id="h3-contents">総目次</h3>
           <p>
-            <ol>
+            トップページ(あなたがいま見ているこのページ)以外のすべてのページのリストです。
+            各ページ内の目次は含んでいません。
+            <ul>
               <li>
                 <a href="self-introduction.html" title="自己紹介">自己紹介</a>
-                <ol>
+                <ul>
                   <li>まえがき</li>
                   <li>経歴</li>
                   <li>基本的な世界観</li>
                   <li>信念・感情・行動の合理的な分析</li>
                   <li>不合理な行動の傾向</li>
-                </ol>
+                </ul>
               </li>
               <li>数学</li>
-            </ol>
+              <li>
+                日記
+                <ul>
+                  <li>
+                    2026年8月
+                    <ul>
+                      <li>2026年8月31日</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </p>
 
-          <h3>技術的なこと</h3>
+          <h3 id="h3-technical">技術的なこと</h3>
           <p>各ページをpdfとepub形式でダウンロードできます。</p>
         </section>
 
         <section>
-          <h2>更新履歴</h2>
+          <h2 id="h2-update">更新履歴</h2>
           <time datetime="2026-08-12">2026年8月12日</time>、サイトを作り始める。
         </section>
 
         <section>
-          <h2 id="contact">連絡先</h2>
+          <h2 id="h2-contact">連絡先</h2>
           <p>連絡先情報があれば記載してください。</p>
         </section>
       </article>
