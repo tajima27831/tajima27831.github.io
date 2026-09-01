@@ -4,6 +4,7 @@
     <link rel="icon" href="images/diagram.jpg" type="image/x-icon" /><!--.icoファイルでもよいという話だったが、うまくいかない-->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="田嶋のWebサイトです。私自身についてと、私の考えたことについてと、私の行動したことについて書きます。" />
     <title>内向性・視野狭窄・詐病</title>
     <link href="styles/test.css" rel="stylesheet"/>
   </head>
@@ -12,55 +13,60 @@
     <header>
       <h1>内向性・視野狭窄・詐病</h1>
     </header>
+    <hr>
     <nav>
-      <!--<ul class="header-banner">
-        <li class="header-banner">トップ</li>
-        <li class="header-banner">自己紹介</li>
-        <li class="header-banner">数学</li>
-        <li class="header-banner">日記</li>
-        <li class="header-banner">その他</li>
-      </ul>-->
-      <hr>
-      <p>このページの最終更新：<time datetime="2026-08-12">2026年8月12日</time></p>
-      <p>
-        このページの目次：
-        <ul>
-          <li>
-            <a title="このサイトについて" href="#h2-about">このサイトについて</a>
-            <ul>
-              <li><a title="このサイトの由来" href="#h3-origin">このサイトの由来</a></li>
-              <li><a title="総目次" href="#h3-contents">総目次</a></li>
-              <li><a title="技術的なこと" href="#h3-technical">技術的なこと</a></li>
-            </ul>
-          </li>
-          <li><a title="更新履歴" href="#h2-update">更新履歴</a></li>
-          <li><a title="連絡先" href="#h2-contact">連絡先</a></li>
-        </ul>
-      </p>
+      このページの最終更新：<time datetime="2026-08-12">2026年8月12日</time>
+      <br><span class="test">このページの目次：</span>
+      <ul>
+        <li>
+          <a title="このサイトについて" href="#about">このサイトについて</a>
+          <ul>
+            <li><a title="名前の検討" href="#about/name">名前の検討</a></li>
+            <li><a title="総目次" href="#about/contents">総目次</a></li>
+            <li><a title="技術的なこと" href="#about/technical">技術的なこと</a></li>
+          </ul>
+        </li>
+        <li><a title="更新履歴" href="#update">更新履歴</a></li>
+        <li><a title="連絡先" href="#contact">連絡先</a></li>
+      </ul>
     </nav>
 
     <!--ここからがこのページに固有の内容-->
     <hr>
     <main>
-      <p><a href="test.pdf" download>このページのpdfをダウンロード</a></p>
+      <a href="test.pdf" download>このページのpdfをダウンロード</a>
       <article>
         <section>
-          <h2 id="h2-about">このサイトについて</h2>
+          <h2 id="about">このサイトについて</h2>
           <p>
-            田嶋(twitter@yoshino_no_no_n)のwebサイトです。すべて田嶋が書いています。
+            田嶋(twitter@yoshino_no_no_n)のwebサイトです。
+            このサイトは、自分自身について他人に伝えるために書き始めていた<a href="self-introduction.html" title="自己紹介">自己紹介</a>を公開することを主な目的として作成されました。
+            私が誰か、どんな人間かについては<a href="self-introduction.html" title="自己紹介">自己紹介</a>を読んでください。
             <br>私自身についてと、私の考えたことについてと、私の行動したことについて書きます。
-            <br>なにかあれば<a title="連絡先" href="#h2-contact">連絡先</a>から。
+            <br>すべて私が書いており、文責は私にあります。
+            なにか私に伝えたいことがあれば<a title="連絡先" href="#contact">連絡先</a>までお願いします。
           </p>
           
-          <h3 id="h3-origin">このサイトの由来</h3>
+          <h3 id="about/name">サイト名の検討</h3>
+          <p>
+            サイト名は『偶然性・アイロニー・連帯』のオマージュです。内向性と視野狭窄と詐病はどれも、考慮すべきなのに忘れがちという点で重要な私の行動や考えの傾向を一言で表しています。
+            内向性は、
+            視野狭窄については特に言うこともないですが、
+            詐病
+          </p>
+          <p>
+            この名前の長所は
+          </p>
           
-          <h3 id="h3-contents">総目次</h3>
+          <h3 id="about/contents">総目次</h3>
           <p>
             トップページ(あなたがいま見ているこのページ)以外のすべてのページのリストです。
             各ページ内の目次は含んでいません。
-            <ul>
+            ページ名の後のカッコは最終更新日です。
+            <ul class="contents">
               <li>
-                <a href="self-introduction.html" title="自己紹介">自己紹介</a>
+                <details open>
+                <summary><a href="self-introduction.html" title="自己紹介">自己紹介</a></summary>
                 <ul>
                   <li>まえがき</li>
                   <li>経歴</li>
@@ -68,34 +74,67 @@
                   <li>信念・感情・行動の合理的な分析</li>
                   <li>不合理な行動の傾向</li>
                 </ul>
+                </details>
               </li>
-              <li>数学</li>
               <li>
-                日記
+                <details open>
+                <summary>数学</summary>
                 <ul>
+                  <li>数学徒としての自己紹介</li>
+                  <li>院試体験記</li>
+                </ul>
+                </details>
+              </li>
+              <li>
+                <details open>
+                <summary>言及</summary>
+                <ul>
+                  <li>Twitterについて</li>
+                </ul>
+                </details>
+              </li>
+              <li>
+                <details open>
+                <summary>日記</summary>
+                <ul class="contents">
                   <li>
-                    2026年8月
+                    <details>
+                    <summary>2026年8月</summary>
                     <ul>
                       <li>2026年8月31日</li>
                     </ul>
+                    </details>
                   </li>
                 </ul>
+                </details>
               </li>
             </ul>
           </p>
 
-          <h3 id="h3-technical">技術的なこと</h3>
-          <p>各ページをpdfとepub形式でダウンロードできます。</p>
+          <h3 id="about/technical">技術的なこと</h3>
+
+          <h4 id="about/technical/requirments">要件</h4>
+
+          <h4 id="about/technical/design">デザイン</h4>
+
+          <h4 id="about/technical/link">リンクのはりかた</h4>
+
+          <h4 id="about/technical/workflowy">Workflowyによる編集</h4>
+
+          <h4 id="about/technical/math">TeXやTypstによる編集</h4>
+          <p>htmlでの表示では、証明をdetails要素で書く。証明中の補題は入れ子で書けるようにする。</p>
         </section>
 
         <section>
-          <h2 id="h2-update">更新履歴</h2>
+          <h2 id="update">更新履歴</h2>
           <time datetime="2026-08-12">2026年8月12日</time>、サイトを作り始める。
         </section>
 
         <section>
-          <h2 id="h2-contact">連絡先</h2>
-          <p>連絡先情報があれば記載してください。</p>
+          <h2 id="contact">連絡先</h2>
+          <p>
+            twitter@yoshino_no_no_n
+          </p>
         </section>
       </article>
     </main>

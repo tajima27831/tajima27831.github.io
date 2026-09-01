@@ -1,32 +1,30 @@
+.breadcrumb {
+  padding: 0.5em;
+}
 h1 {
-  margin: 0;
-  padding: 20px 0;
+  display: flex;
+  justify-content: center;
   color: #00539f;
 }
-header {
-  margin-bottom: 10px;
+body {
+  padding: 0 10%;
 }
-header img {
-  height: 60px;
+@media screen and (width <= 50em) {
+  /*小さい画面だけ適用される*/
+  body {
+    padding: 0;
+  }
 }
-h1 {
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
+hr {
+  width: 90%;
 }
-ul.header-banner {
-  padding: 0;
-  list-style-type: none;
-  display: flex;
+.test {
+  border: 1px dashed blue;
 }
-li.header-banner {
-  text-align: center;
-  flex: 1;
+ul {
+  border: 1px dashed red;
 }
-img {
-  display: block;
-  width: auto;
-  max-width: 30%;
+ul.contents {
+  list-style: none;
+  padding-left: 1.5em;
 }
