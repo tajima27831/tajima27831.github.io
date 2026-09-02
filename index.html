@@ -16,14 +16,22 @@
     <hr>
     <nav>
       このページの最終更新：<time datetime="2026-08-12">2026年8月12日</time>
-      <br><span class="test">このページの目次：</span>
+      <br>このページの目次：
       <ul>
         <li>
           <a title="このサイトについて" href="#about">このサイトについて</a>
           <ul>
             <li><a title="名前の検討" href="#about/name">名前の検討</a></li>
             <li><a title="総目次" href="#about/contents">総目次</a></li>
-            <li><a title="技術的なこと" href="#about/technical">技術的なこと</a></li>
+            <li>
+              <a title="技術的なこと" href="#about/technical">技術的なこと</a>
+              <ul>
+                <li><a title="デザイン" href="#about/technical/design">デザイン</a></li>
+                <li><a title="リンクのはり方" href="#about/technical/link">リンクのはり方</a></li>
+                <li><a title="Workflowyによる編集" href="#about/technical/workflowy">Workflowyによる編集</a></li>
+                <li><a title="TeXやTypstによる編集" href="#about/technical/math">TeXやTypstによる編集</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
         <li><a title="更新履歴" href="#update">更新履歴</a></li>
@@ -41,7 +49,6 @@
           <p>
             田嶋(twitter@yoshino_no_no_n)のwebサイトです。
             このサイトは、自分自身について他人に伝えるために書き始めていた<a href="self-introduction.html" title="自己紹介">自己紹介</a>を公開することを主な目的として作成されました。
-            私が誰か、どんな人間かについては<a href="self-introduction.html" title="自己紹介">自己紹介</a>を読んでください。
             <br>私自身についてと、私の考えたことについてと、私の行動したことについて書きます。
             <br>すべて私が書いており、文責は私にあります。
             なにか私に伝えたいことがあれば<a title="連絡先" href="#contact">連絡先</a>までお願いします。
@@ -49,13 +56,17 @@
           
           <h3 id="about/name">サイト名の検討</h3>
           <p>
-            サイト名は『偶然性・アイロニー・連帯』のオマージュです。内向性と視野狭窄と詐病はどれも、考慮すべきなのに忘れがちという点で重要な私の行動や考えの傾向を一言で表しています。
+            現在のサイト名である「内向性・視野狭窄・詐病」はローティの『偶然性・アイロニー・連帯』のオマージュです。
+            内向性と視野狭窄と詐病はどれも、考慮すべきなのに忘れがちという点で重要な私の行動や考えの傾向を一言で表しています。
             内向性は、
             視野狭窄については特に言うこともないですが、
             詐病
           </p>
           <p>
             この名前の長所は
+          </p>
+          <p>
+            短所として、自己憐憫を含められなかったこと、オマージュがださいこと
           </p>
           
           <h3 id="about/contents">総目次</h3>
@@ -113,16 +124,17 @@
 
           <h3 id="about/technical">技術的なこと</h3>
 
-          <h4 id="about/technical/requirments">要件</h4>
-
           <h4 id="about/technical/design">デザイン</h4>
 
-          <h4 id="about/technical/link">リンクのはりかた</h4>
+          <h4 id="about/technical/link">リンクのはり方</h4>
 
           <h4 id="about/technical/workflowy">Workflowyによる編集</h4>
 
           <h4 id="about/technical/math">TeXやTypstによる編集</h4>
-          <p>htmlでの表示では、証明をdetails要素で書く。証明中の補題は入れ子で書けるようにする。</p>
+          <p>
+            htmlでの表示では、証明をdetails要素で書く。証明中の補題は入れ子で書けるようにする。
+            PDFファイルをダウンロードできるようにする。
+          </p>
         </section>
 
         <section>
@@ -138,5 +150,10 @@
         </section>
       </article>
     </main>
+
+    <hr>
+    <footer>
+      <a title="内向性・視野狭窄・詐病" href="/">このページの一番上へ</a>
+    </footer>
   </body>
 </html>

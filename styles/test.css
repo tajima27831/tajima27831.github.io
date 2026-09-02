@@ -1,6 +1,9 @@
 .breadcrumb {
   padding: 0.5em;
 }
+ul {
+  margin-top: 0em;
+}
 h1 {
   display: flex;
   justify-content: center;
@@ -10,7 +13,7 @@ body {
   padding: 0 10%;
 }
 @media screen and (width <= 50em) {
-  /*小さい画面だけ適用される*/
+  /*小さい画面でだけ適用される*/
   body {
     padding: 0;
   }
@@ -18,13 +21,10 @@ body {
 hr {
   width: 90%;
 }
-.test {
-  border: 1px dashed blue;
-}
-ul {
-  border: 1px dashed red;
-}
 ul.contents {
   list-style: none;
   padding-left: 1.5em;
+}
+.test {
+  border: 1px dashed blue;
 }
