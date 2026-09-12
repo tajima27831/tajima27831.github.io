@@ -21,9 +21,13 @@ body {
 hr {
   width: 90%;
 }
-ul.contents {
+ul.contents-details {
   list-style: none;
   padding-left: 1.5em;
+}
+p {
+  text-indent: 1em;
+  margin: 0;
 }
 .test {
   border: 1px dashed blue;

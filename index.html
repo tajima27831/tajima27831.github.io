@@ -13,7 +13,9 @@
     <header>
       <h1>内向的近況報告</h1>
     </header>
+
     <hr>
+    
     <nav>
       このページの最終更新：<time datetime="2026-08-12">2026年8月12日</time>
       <br>このページの目次：
@@ -23,59 +25,51 @@
           <ul>
             <li><a title="名前の検討" href="#about/name">名前の検討</a></li>
             <li><a title="総目次" href="#about/contents">総目次</a></li>
-            <li>
-              <a title="技術的なこと" href="#about/technical">技術的なこと</a>
-              <ul>
-                <li><a title="デザイン" href="#about/technical/design">デザイン</a></li>
-                <li><a title="リンクのはり方" href="#about/technical/link">リンクのはり方</a></li>
-                <li><a title="Workflowyによる編集" href="#about/technical/workflowy">Workflowyによる編集</a></li>
-                <li><a title="TeXやTypstによる編集" href="#about/technical/math">TeXやTypstによる編集</a></li>
-              </ul>
-            </li>
           </ul>
         </li>
         <li><a title="更新履歴" href="#update">更新履歴</a></li>
         <li><a title="連絡先" href="#contact">連絡先</a></li>
       </ul>
+      <a href="test.pdf" download>このページのpdfをダウンロード</a>
     </nav>
 
-    <!--ここからがこのページに固有の内容-->
     <hr>
+
+    <!--ここからがこのページに固有の内容-->
     <main>
-      <a href="test.pdf" download>このページのpdfをダウンロード</a>
-      <article>
-        <section>
-          <h2 id="about">このサイトについて</h2>
-          <p>
-            田嶋(twitter@yoshino_no_no_n)のwebサイトです。
-            このサイトは、自分自身について他人に伝えるために書き始めていた<a href="self-introduction.html" title="自己紹介">自己紹介</a>を公開することを主な目的として作成されました。
-            <br>私自身についてと、私の考えたことについてと、私の行動したことについて書きます。
-            <br>すべて私が書いており、文責は私にあります。
-            なにか私に伝えたいことがあれば<a title="連絡先" href="#contact">連絡先</a>までお願いします。
-          </p>
-          
-          <h3 id="about/name">サイト名の検討</h3>
+      <section id="about">
+        <h2>このサイトについて</h2>
+        <p>
+          田嶋(twitter@yoshino_no_no_n)のwebサイトです。
+          このサイトは、<a href="self-introduction.html" title="自己紹介">自己紹介</a>を公開することを主な目的として作成されました。
+          私自身についてと、私の考えたことについてと、私の行動したことについて書きます。
+        </p>
+        <p>
+          すべて私が書いており、文責は私にあります。
+          なにか私に伝えたいことがあれば<a title="連絡先" href="#contact">連絡先</a>までお願いします。
+        </p>
+        
+        <section id="about/name">
+          <h3>サイト名の検討</h3>
           <p>
             現在のサイト名である「内向的近況報告」は
           </p>
           <p>
-            この名前の長所は
+            この名前の長所は、短所として、自己憐憫を含められなかったこと、オマージュがださいこと
           </p>
-          <p>
-            短所として、自己憐憫を含められなかったこと、オマージュがださいこと
-          </p>
-          
-          <h3 id="about/contents">総目次</h3>
+        </section>
+        
+        <section id="about/contents">
+          <h3>総目次</h3>
           <p>
             トップページ(あなたがいま見ているこのページ)以外のすべてのページのリストです。
             各ページ内の目次は含んでいません。
             ページ名の後のカッコは最終更新日です。
-            <ul class="contents">
+            <ul class="contents-details">
               <li>
                 <details open>
                 <summary><a href="self-introduction.html" title="自己紹介">自己紹介</a></summary>
                 <ul>
-                  <li>まえがき</li>
                   <li>経歴</li>
                   <li>基本的な世界観</li>
                   <li>信念・感情・行動の合理的な分析</li>
@@ -85,71 +79,72 @@
               </li>
               <li>
                 <details open>
-                <summary>数学</summary>
-                <ul>
-                  <li>数学徒としての自己紹介</li>
-                  <li>院試体験記</li>
-                </ul>
+                  <summary>数学</summary>
+                  <ul>
+                    <li>数学徒としての自己紹介</li>
+                    <li>院試体験記</li>
+                  </ul>
                 </details>
               </li>
               <li>
                 <details open>
-                <summary>言及</summary>
-                <ul>
-                  <li>Twitterについて</li>
-                </ul>
+                  <summary>言及</summary>
+                  <ul>
+                    <li>Twitterについて</li>
+                  </ul>
                 </details>
               </li>
               <li>
                 <details open>
-                <summary>日記</summary>
-                <ul class="contents">
-                  <li>
-                    <details>
-                    <summary>2026年8月</summary>
-                    <ul>
-                      <li>2026年8月31日</li>
-                    </ul>
-                    </details>
-                  </li>
-                </ul>
+                  <summary>日記</summary>
+                  <ul class="contents-details">
+                    <li>
+                      <details>
+                        <summary>2026年8月</summary>
+                        <ul>
+                          <li>2026年8月31日</li>
+                        </ul>
+                      </details>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <details open>
+                  <summary><a title="技術" href="/technical">技術</a></summary>
+                  <ul>
+                    <li><a title="デザイン" href="/technical/design.html">デザイン</a></li>
+                    <li><a title="リンクのはり方" href="/technical/link.html">リンクのはり方</a></li>
+                    <li><a title="Workflowyによる編集" href="/technical/workflowy.html">Workflowyによる編集</a></li>
+                    <li><a title="TeXやTypstによる編集" href="/technical/math.html">TeXやTypstによる編集</a></li>
+                  </ul>
                 </details>
               </li>
             </ul>
           </p>
-
-          <h3 id="about/technical">技術的なこと</h3>
-
-          <h4 id="about/technical/design">デザイン</h4>
-
-          <h4 id="about/technical/link">リンクのはり方</h4>
-
-          <h4 id="about/technical/workflowy">Workflowyによる編集</h4>
-
-          <h4 id="about/technical/math">TeXやTypstによる編集</h4>
-          <p>
-            htmlでの表示では、証明をdetails要素で書く。証明中の補題は入れ子で書けるようにする。
-            PDFファイルをダウンロードできるようにする。
-          </p>
         </section>
+      </section>
 
-        <section>
-          <h2 id="update">更新履歴</h2>
-          <time datetime="2026-08-12">2026年8月12日</time>、サイトを作り始める。
-        </section>
+      <section id="update">
+        <h2>更新履歴</h2>
+        <time datetime="2026-08-12">2026年8月12日</time>、サイトを作り始める。
+        <time datetime="2026-09-06">2026年9月6日</time>、サイト名を「内向的近況報告」に変更する。
+      </section>
 
-        <section>
-          <h2 id="contact">連絡先</h2>
-          <p>
-            twitter@yoshino_no_no_n
-          </p>
-        </section>
-      </article>
+      <section id="contact">
+        <h2>連絡先</h2>
+        <p>
+          twitter@yoshino_no_no_n
+        </p>
+      </section>
     </main>
 
     <hr>
+
     <footer>
-      <a title="内向的近況報告" href="/">このページの一番上へ</a>
+      <nav>
+        <a title="内向的近況報告" href="/">このページの一番上へ</a>
+      </nav>
     </footer>
   </body>
 </html>
