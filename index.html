@@ -21,14 +21,15 @@
       <br>このページの目次：
       <ul>
         <li>
-          <a title="このサイトについて" href="#about">このサイトについて</a>
+          <a href="#about">このサイトについて</a>
           <ul>
-            <li><a title="名前の検討" href="#about/name">名前の検討</a></li>
-            <li><a title="総目次" href="#about/contents">総目次</a></li>
+            <li><a href="#about/name">サイト名の検討</a></li>
+            <li><a href="#about/links">リンクの貼り方</a></li>
           </ul>
         </li>
-        <li><a title="更新履歴" href="#update">更新履歴</a></li>
-        <li><a title="連絡先" href="#contact">連絡先</a></li>
+        <li><a href="#contents">総目次</a></li>
+        <li><a href="#update">更新履歴</a></li>
+        <li><a href="#contact">連絡先</a></li>
       </ul>
       <a href="test.pdf" download>このページのpdfをダウンロード</a>
     </nav>
@@ -41,12 +42,12 @@
         <h2>このサイトについて</h2>
         <p>
           田嶋(twitter@yoshino_no_no_n)のwebサイトです。
-          このサイトは、<a href="self-introduction.html" title="自己紹介">自己紹介</a>を公開することを主な目的として作成されました。
+          このサイトは、<a href="self-introduction.html">自己紹介</a>を公開することを主な目的として作成されました。
           私自身についてと、私の考えたことについてと、私の行動したことについて書きます。
         </p>
         <p>
           すべて私が書いており、文責は私にあります。
-          なにか私に伝えたいことがあれば<a title="連絡先" href="#contact">連絡先</a>までお願いします。
+          なにか私に伝えたいことがあれば<a href="#contact">連絡先</a>までお願いします。
         </p>
         
         <section id="about/name">
@@ -58,77 +59,82 @@
             この名前の長所は、短所として、自己憐憫を含められなかったこと、オマージュがださいこと
           </p>
         </section>
+
+        <section id="about/links">
+          <h3>リンクの貼り方</h3>
+        </section>
+      </section>
         
-        <section id="about/contents">
-          <h3>総目次</h3>
-          <p>
-            トップページ(あなたがいま見ているこのページ)以外のすべてのページのリストです。
-            各ページ内の目次は含んでいません。
-            ページ名の後のカッコは最終更新日です。
-            <ul class="contents-details">
-              <li>
-                <details open>
-                <summary><a href="self-introduction.html" title="自己紹介">自己紹介</a></summary>
+      <section id="contents">
+        <h2>総目次</h2>
+        <p>
+          トップページ(あなたがいま見ているこのページ)以外のすべてのページのリストです。
+          各ページ内の目次は含んでいません。
+          ページ名の後のカッコは最終更新日です。
+          <ul class="contents-details">
+            <li>
+              <details open>
+                <summary><a href="self-introduction.html">自己紹介</a></summary>
                 <ul>
                   <li>経歴</li>
                   <li>基本的な世界観</li>
                   <li>信念・感情・行動の合理的な分析</li>
                   <li>不合理な行動の傾向</li>
                 </ul>
-                </details>
-              </li>
-              <li>
-                <details open>
-                  <summary>数学</summary>
-                  <ul>
-                    <li>数学徒としての自己紹介</li>
-                    <li>院試体験記</li>
-                  </ul>
-                </details>
-              </li>
-              <li>
-                <details open>
-                  <summary>言及</summary>
-                  <ul>
-                    <li>Twitterについて</li>
-                  </ul>
-                </details>
-              </li>
-              <li>
-                <details open>
-                  <summary>日記</summary>
-                  <ul class="contents-details">
-                    <li>
-                      <details>
-                        <summary>2026年8月</summary>
-                        <ul>
-                          <li>2026年8月31日</li>
-                        </ul>
-                      </details>
-                    </li>
-                  </ul>
-                </details>
-              </li>
-              <li>
-                <details open>
-                  <summary><a title="技術" href="/technical">技術</a></summary>
-                  <ul>
-                    <li><a title="デザイン" href="/technical/design.html">デザイン</a></li>
-                    <li><a title="リンクのはり方" href="/technical/link.html">リンクのはり方</a></li>
-                    <li><a title="Workflowyによる編集" href="/technical/workflowy.html">Workflowyによる編集</a></li>
-                    <li><a title="TeXやTypstによる編集" href="/technical/math.html">TeXやTypstによる編集</a></li>
-                  </ul>
-                </details>
-              </li>
-            </ul>
-          </p>
-        </section>
+              </details>
+            </li>
+            <li>
+              <details open>
+                <summary>数学</summary>
+                <ul>
+                  <li>数学徒としての自己紹介</li>
+                  <li>院試体験記</li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details open>
+                <summary>言及</summary>
+                <ul>
+                  <li>Twitterについて</li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details open>
+                <summary>日記</summary>
+                <ul class="contents-details">
+                  <li>
+                    <details>
+                      <summary>2026年8月</summary>
+                      <ul>
+                        <li>2026年8月31日</li>
+                      </ul>
+                    </details>
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details open>
+                <summary><a href="/technical">技術</a></summary>
+                <ul>
+                  <li><a href="/technical/design.html">デザイン</a></li>
+                  <li><a href="/technical/workflowy.html">Workflowyによる編集</a></li>
+                  <li><a href="/technical/math.html">TeXやTypstによる編集</a></li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+        </p>
       </section>
 
       <section id="update">
         <h2>更新履歴</h2>
-        <time datetime="2026-08-12">2026年8月12日</time>、サイトを作り始める。
-        <time datetime="2026-09-06">2026年9月6日</time>、サイト名を「内向的近況報告」に変更する。
+        <ul>
+          <li><time datetime="2026-09-06">2026年9月6日</time>、サイト名を「内向的近況報告」に変更する。</li>
+          <li><time datetime="2026-08-12">2026年8月12日</time>、サイトを作り始める。</li>
+        </ul>
       </section>
 
       <section id="contact">
@@ -143,7 +149,7 @@
 
     <footer>
       <nav>
-        <a title="内向的近況報告" href="/">このページの一番上へ</a>
+        <a href="/">このページの一番上へ</a>
       </nav>
     </footer>
   </body>
