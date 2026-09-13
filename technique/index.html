@@ -4,29 +4,59 @@
     <link rel="icon" href="/images/diagram.jpg" type="image/x-icon" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>技術｜内向的近況報告</title>
+    <meta name="description" content="このサイトを作るときに用いた技術を中心に、主にWeb開発技術について書いた記事を集めます。" />
+    <title>技術的なこと｜内向的近況報告</title>
     <link href="/styles/test.css" rel="stylesheet" />
   </head>
 
   <body>
-    <header><!--トップページが固まったらそれを移植するので、ここはいったん放置-->
-      <h1>内向的近況報告</h1>
-      <hr />
-      <nav class="breadcrumb"><a href="/">トップ</a> &gt; 技術<br /></nav><!--あとでulで書き直す-->
-      このページの最終更新：<time datetime="2026-08-12">2026年8月12日</time>
-      <br />このページの目次：
-      <ul>
-        <li>このサイトについて</li>
-        <li>更新履歴</li>
-        <li>連絡先</li>
-      </ul>
+    <header>
+      <div class="site-name">内向的近況報告</div>
+
+      <hr>
+
+      <nav aria-label="Breadcrumb">
+        <ul class="breadcrumb">
+          <li><a href="/">ホーム</a></li>
+          <li><span aria-current="page">技術的なこと</span></li>
+        </ul>
+      </nav>
+
+      <div class="last-update">このページの最終更新：<time datetime="2026-08-12">2026年8月12日</time></div>
+    
+      <nav class="page-contents">
+        このページの目次：
+        <ul>
+          <li>
+            <a href="#about">技術的な概要</a>
+            <ul>
+              <li><a href="#about/name">要件</a></li>
+              <li><a href="#about/links">システム構成</a></li>
+            </ul>
+          </li>
+          <li><a href="#about">美的な要請</a></li>
+          <li><a href="#contents">使いやすさとアクセシビリティ</a></li>
+          <li><a href="#update">更新履歴</a></li>
+          <li><a href="#contact">連絡先</a></li>
+        </ul>
+      </nav>
+
+      <div class="page-pdf"><a href="/test.pdf" download>このページのpdfをダウンロード</a></div>
     </header>
 
-    <hr />
+    <hr>
 
     <main>
-      <section id="design">
-        <h2>このサイトのデザイン</h2>
+      <h1>技術的なこと</h1>
+      詳しい仕組みはそれぞれのページ
+
+      <section id="abstract">
+        <h2>技術的な概要</h2>
+        できるだけシンプルでローテクに作りたい。
+      </section>
+
+      <section id="html-css">
+        <h2>HTMLとCSS</h2>
       </section>
 
       <section id="workflowy">
@@ -42,10 +72,10 @@
       </section>
     </main>
 
-    <hr />
+    <hr>
 
     <footer>
-      <nav>
+      <nav class="back-to-top">
         <a href="#">このページの一番上へ</a>
       </nav>
     </footer>

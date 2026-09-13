@@ -3,40 +3,58 @@
   <head>
     <link rel="icon" href="/images/diagram.jpg" type="image/x-icon" />
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="このサイトのデザインについて書きます。" />
     <title>このサイトのデザイン｜内向的近況報告</title>
     <link href="/styles/test.css" rel="stylesheet" />
   </head>
 
   <body>
-    <header><!--トップページが固まったらそれを移植するので、ここはいったん放置-->
-      <h1>内向的近況報告</h1>
-      <hr />
-      <nav class="breadcrumb"><a href="/">トップ</a> &gt; 技術<br /></nav><!--あとでulで書き直す-->
-      このページの最終更新：<time datetime="2026-08-12">2026年8月12日</time>
-      <br />このページの目次：
-      <ul>
-        <li>このサイトについて</li>
-        <li>更新履歴</li>
-        <li>連絡先</li>
-      </ul>
+    <header>
+      <div class="site-name">内向的近況報告</div>
+
+      <hr>
+
+      <nav aria-label="Breadcrumb">
+        <ul class="breadcrumb">
+          <li><a href="/">ホーム</a></li>
+          <li><a href="/technique/">技術的なこと</a></li>
+          <li><span aria-current="page">このサイトのデザイン</span></li>
+        </ul>
+      </nav>
+
+      <div class="last-update">このページの最終更新：<time datetime="2026-08-12">2026年8月12日</time></div>
+    
+      <nav class="page-contents">
+        このページの目次：
+        <ul>
+          <li>
+            <a href="#about">このサイトについて</a>
+            <ul>
+              <li><a href="#about/name">サイト名の検討</a></li>
+              <li><a href="#about/links">リンクの貼り方</a></li>
+            </ul>
+          </li>
+          <li><a href="#contents">総目次</a></li>
+          <li><a href="#update">更新履歴</a></li>
+          <li><a href="#contact">連絡先</a></li>
+        </ul>
+      </nav>
+
+      <div class="page-pdf"><a href="/test.pdf" download>このページのpdfをダウンロード</a></div>
     </header>
 
-    <hr />
+    <hr>
 
     <main>
-      <section id="design">
-        <h2>html</h2>
-        <p>
-          br要素、ol要素は使わない。headerのh1以外のすべての見出し要素はsectionかarticleといった位置に対応する。
-        </p>
-      </section>
+      <h1>このサイトのデザイン</h1>
+      できるだけシンプルでローテクに作りたい。
     </main>
 
-    <hr />
+    <hr>
 
     <footer>
-      <nav>
+      <nav class="back-to-top">
         <a href="#">このページの一番上へ</a>
       </nav>
     </footer>

@@ -11,42 +11,43 @@
 
   <body>
     <header>
-      <h1>内向的近況報告</h1>
-    </header>
+      <div class="site-name">内向的近況報告</div>
 
-    <hr>
+      <hr>
+
+      <div class="last-update">このページの最終更新：<time datetime="2026-08-12">2026年8月12日</time></div>
     
-    <nav><!--あとでまるごとheaderに入れる-->
-      このページの最終更新：<time datetime="2026-08-12">2026年8月12日</time>
-      <br>このページの目次：
-      <ul>
-        <li>
-          <a href="#about">このサイトについて</a>
-          <ul>
-            <li><a href="#about/name">サイト名の検討</a></li>
-            <li><a href="#about/links">リンクの貼り方</a></li>
-          </ul>
-        </li>
-        <li><a href="#contents">総目次</a></li>
-        <li><a href="#update">更新履歴</a></li>
-        <li><a href="#contact">連絡先</a></li>
-      </ul>
-      <a href="/test.pdf" download>このページのpdfをダウンロード</a>
-    </nav>
+      <nav>
+        このページの目次：
+        <ul>
+          <li>
+            <a href="#about">このサイトについて</a>
+            <ul>
+              <li><a href="#about/name">サイト名の検討</a></li>
+              <li><a href="#about/links">リンクの貼り方</a></li>
+            </ul>
+          </li>
+          <li><a href="#contents">総目次</a></li>
+          <li><a href="#update">更新履歴</a></li>
+          <li><a href="#contact">連絡先</a></li>
+        </ul>
+      </nav>
+      
+      <div class="page-pdf"><a href="/test.pdf" download>このページのpdfをダウンロード</a></div>
+    </header>
 
     <hr>
 
     <main>
+      <h1>内向的近況報告</h1>
+
       <section id="about">
         <h2>このサイトについて</h2>
         <p>
-          田嶋(twitter@yoshino_no_no_n)のwebサイトです。
-          このサイトは、<a href="self-introduction">自己紹介</a>を公開することを主な目的として作成されました。
-          私自身についてと、私の考えたことについてと、私の行動したことについて書きます。
+          田嶋(twitter@yoshino_no_no_n)のwebサイトです。このサイトは、<a href="self-introduction">自己紹介</a>を公開することを主な目的として作成されました。私自身についてと、私の考えたことについてと、私の行動したことについて書きます。
         </p>
         <p>
-          すべて私が書いており、文責は私にあります。
-          なにか私に伝えたいことがあれば<a href="#contact">連絡先</a>からお願いします。
+          すべて私が書いており、文責は私にあります。なにか私に伝えたいことがあれば<a href="#contact">連絡先</a>からお願いします。
         </p>
         
         <section id="about/name">
@@ -67,9 +68,7 @@
       <section id="contents">
         <h2>総目次</h2>
         <p>
-          トップページ(あなたがいま見ているこのページ)以外のすべてのページのリストです。
-          各ページ内の目次は含んでいません。
-          ページ名の後のカッコは最終更新日です。
+          トップページ(あなたがいま見ているこのページ)以外のすべてのページのリストです。各ページ内の目次は含んでいません。ページ名の後のカッコは最終更新日です。
           <ul class="contents-details">
             <li>
               <details open>
@@ -153,7 +152,7 @@
     <hr>
 
     <footer>
-      <nav>
+      <nav class="back-to-top">
         <a href="/">このページの一番上へ</a>
       </nav>
     </footer>
