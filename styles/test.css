@@ -1,6 +1,19 @@
 .breadcrumb {
   padding: 0.5em;
 }
+ul.breadcrumb {
+  display: flex;/*一つの行に並べて書く*/
+  flex-wrap: wrap;/*はみ出したら次の行へ行く*/
+  list-style: none;/*箇条書きの丸を表示しない*/
+  margin: 0;
+  padding: 0;
+  align-items: end;
+}
+.breadcrumb li:not(:last-child)::after {/*最後のliでないなら、liの後に"/"を挿入*/
+  /*display: inline-block;*/
+  margin: 0 0.25rem;
+  content: "/";
+}
 /*ul {
   margin-top: 0em;
   margin-bottom: 0em;
