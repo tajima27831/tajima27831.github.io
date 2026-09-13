@@ -1,9 +1,10 @@
 .breadcrumb {
   padding: 0.5em;
 }
-ul {
+/*ul {
   margin-top: 0em;
-}
+  margin-bottom: 0em;
+}*/
 h1 {
   display: flex;
   justify-content: center;
