@@ -18,7 +18,8 @@
       <nav aria-label="Breadcrumb">
         <ul class="breadcrumb">
           <li><a href="/">ホーム</a></li>
-          <li><a href="/technique/">技術的なこと</a></li>
+          <li><a href="/technique/">技術</a></li>
+          <li><a href="/technique/this-site/">このサイトについて</a></li>
           <li><span aria-current="page">WorkflowyによるWebページの作成</span></li>
         </ul>
       </nav>
@@ -28,16 +29,8 @@
       <nav class="page-contents">
         このページの目次：
         <ul>
-          <li>
-            <a href="#about">このサイトについて</a>
-            <ul>
-              <li><a href="#about/name">サイト名の検討</a></li>
-              <li><a href="#about/links">リンクの貼り方</a></li>
-            </ul>
-          </li>
-          <li><a href="#contents">総目次</a></li>
-          <li><a href="#update">更新履歴</a></li>
-          <li><a href="#contact">連絡先</a></li>
+          <li><a href="#progress-log">開発過程</a></li>
+          <li><a href="#specification">仕様</a></li>
         </ul>
       </nav>
 
@@ -49,25 +42,14 @@
     <main>
       <h1>WorkflowyによるWebページの作成</h1>
 
-      <section id="design">
-        <h2>このサイトのデザイン</h2>
+      <section id="progress-log">
+        <h2>開発過程</h2>
+        <p>すべてのテキストはブロックコンテンツのいずれか（div section main nav）に入る。直上のブロックコンテンツが、そのテキストの内容を説明する。</p>
+      </section>
+
+      <section id="specification">
+        <h2>仕様</h2>
         できるだけシンプルでローテクに作りたい。
-      </section>
-
-      <section id="html-css">
-        <h2>HTMLとCSS</h2>
-      </section>
-
-      <section id="workflowy">
-        <h2>Workflowyによる編集</h2>
-      </section>
-
-      <section id="math">
-        <h2>数学文書</h2>
-        <p>
-          htmlでの表示では、証明をdetails要素で書く。証明中の補題は入れ子で書けるようにする。
-          PDFファイルをダウンロードできるようにする。
-        </p>
       </section>
     </main>
 

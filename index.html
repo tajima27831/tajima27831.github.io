@@ -33,7 +33,7 @@
         </ul>
       </nav>
       
-      <div class="page-pdf"><a href="/test.pdf" download>このページのpdfをダウンロード</a></div>
+      <div class="page-pdf"><a class="pdf" href="/test.pdf" download>このページのpdfをダウンロード</a></div>
     </header>
 
     <hr>
@@ -67,8 +67,8 @@
         
       <section id="contents">
         <h2>総目次</h2>
-        <p>
-          トップページ(あなたがいま見ているこのページ)以外のすべてのページのリストです。各ページ内の目次は含んでいません。ページ名の後のカッコは最終更新日です。
+        <P>トップページ(あなたがいま見ているこのページ)以外のすべてのページのリストです。各ページ内の目次は含んでいません。ページ名の後のカッコは最終更新日です。</P>
+        <nav>
           <ul class="contents-details">
             <li>
               <details open>
@@ -110,21 +110,45 @@
                       </ul>
                     </details>
                   </li>
+                  <li>
+                    <details>
+                      <summary>2026年9月</summary>
+                      <ul>
+                        <li>2026年9月15日</li>
+                      </ul>
+                    </details>
+                  </li>
                 </ul>
               </details>
             </li>
             <li>
               <details open>
-                <summary><a href="technique">技術的なこと</a></summary>
-                <ul>
-                  <li><a href="technique/design.html">このサイトのデザイン</a></li>
-                  <li><a href="technique/workflowy.html">WorkflowyによるWebページの作成</a></li>
-                  <li><a href="technique/math.html">TeXやTypstによるWebページの作成</a></li>
+                <summary><a href="/technique/">技術</a></summary>
+                <ul class="contents-details">
+                  <li>
+                    <details open>
+                      <summary><a href="technique/this-site/">このサイトについて</a></summary>
+                      <ul>
+                        <li><a href="technique/this-site/design.html">デザイン</a></li>
+                        <li><a href="technique/this-site/workflowy.html">WorkflowyによるWebページの作成</a></li>
+                        <li><a href="technique/this-site/math.html">TeXやTypstによるWebページの作成</a></li>
+                        <li><a href="technique/this-site/html-css.html">HTMLとCSS</a></li>
+                      </ul>
+                    </details>
+                  </li>
+                  <li>
+                    <details open>
+                      <summary>TeX</summary>
+                      <ul>
+                        <li>なにか</li>
+                      </ul>
+                    </details>
+                  </li>
                 </ul>
               </details>
             </li>
           </ul>
-        </p>
+        </nav>
       </section>
 
       <section id="update">
@@ -138,12 +162,12 @@
       <section id="contact">
         <h2>連絡先</h2>
         <p>Discordを一番頻繁に確認しています。Discordはアカウントへのリンクを作れないらしく、Discord内の検索バーにユーザー名を入力してもらう必要があります。</p>
-        <p>mixi2は招待制です。アカウントを持っていない方は<a href="https://mixi.social/invitations/@yoshino437/7RmJsydU4h4ZedDUhGtoMv">招待リンク</a>からどうぞ。</p>
+        <p>mixi2は招待制です。アカウントを持っていない方は<a target="_blank" href="https://mixi.social/invitations/@yoshino437/7RmJsydU4h4ZedDUhGtoMv">招待リンク</a>からどうぞ。</p>
         <address>
           <ul>
             <li>Discordユーザー名：yoshino437</li>
-            <li>Twitter：<a href="https://twitter.com/yoshino_no_no_n">@yoshino_no_no_n</a></li>
-            <li>mixi2：<a href="https://mixi.social/@yoshino437">@yoshino437</a></li>
+            <li>Twitter：<a target="_blank" href="https://twitter.com/yoshino_no_no_n">@yoshino_no_no_n</a></li>
+            <li>mixi2：<a target="_blank" href="https://mixi.social/@yoshino437">@yoshino437</a></li>
           </ul>
         </address>
       </section>

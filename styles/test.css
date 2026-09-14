@@ -36,6 +36,14 @@ p {
   text-indent: 1em;
   margin: 0;
 }
+a[target=_blank] {
+  padding-right: 1em;
+	background: url(/images/external-link.svg) right/1em no-repeat;
+}
+a.pdf {
+  padding-right: 1em;
+  background: url(/images/pdf.svg) right/1em no-repeat;
+}
 .test {
   border: 1px dashed blue;
 }
