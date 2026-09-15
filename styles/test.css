@@ -1,3 +1,14 @@
+:root {
+  color-scheme: light dark;
+  color: light-dark(black, gainsboro);
+  background-color: light-dark(white, black);
+}
+a:link {
+  color: light-dark(blue, royalblue);
+}
+a:visited {
+  color: light-dark(purple, mediumpurple);
+}
 ul.breadcrumb {
   display: flex;/*一つの行に並べて書く*/
   flex-wrap: nowrap;/*はみ出したら次の行へ行く*/
@@ -13,7 +24,6 @@ ul.breadcrumb {
 div.site-name {
   display: flex;
   justify-content: center;
-  color: #00539e;
   font-size: 2em;
   font-weight: bold;
 }
@@ -38,11 +48,11 @@ p {
 }
 a[target=_blank] {
   padding-right: 1em;
-	background: url(/images/external-link.svg) right/1em no-repeat;
+	background: light-dark(url(/images/external-link.svg), url(/images/external-link-dark.svg)) right/1em no-repeat;
 }
 a.pdf {
   padding-right: 1em;
-  background: url(/images/pdf.svg) right/1em no-repeat;
+  background: light-dark(url(/images/pdf.svg), url(/images/pdf-dark.svg)) right/1em no-repeat;
 }
 .test {
   border: 1px dashed blue;
