@@ -10,12 +10,12 @@ a:visited {
   color: light-dark(purple, mediumpurple);
 }
 ul.breadcrumb {
-  display: flex;/*一つの行に並べて書く*/
-  flex-wrap: nowrap;/*はみ出したら次の行へ行く*/
+  display: flex;/*隙間なく詰める*/
   overflow-x: auto;
   list-style: none;/*箇条書きの丸を表示しない*/
   padding: 0;
   margin: 0.5em 0;
+  text-wrap-mode: nowrap;/*flexで詰めるliが改行しない*/
 }
 .breadcrumb li:not(:last-child)::after {/*最後のliでないなら、liの後に"/"を挿入*/
   margin: 0 0.5em;
