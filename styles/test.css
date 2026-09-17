@@ -65,6 +65,13 @@ a.external-link {
   background-repeat: no-repeat;
   background-size: 1em;
 }
+a.external-link-test {
+  padding-right: 1em;
+	background-image: url(/images/external-link-dark.svg);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 1em;
+}
 a.pdf {
   padding-right: 1em;
   background-image: light-dark(url(/images/pdf.svg), url(/images/pdf-dark.svg));
@@ -76,7 +83,7 @@ a.pdf {
 /*----------------------コード---------------------------------*/
 
 code {
-  background-color: #eeeeee;
+  background-color: light-dark(#eeeeee, #333333);
   border-radius: 3px;
   font-family: "Courier New", monospace;
   padding: 0 0.2em;
