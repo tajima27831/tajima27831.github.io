@@ -1,3 +1,6 @@
+
+/*---------------サイト全体------------------*/
+
 :root {
   color-scheme: light dark;
   color: light-dark(black, gainsboro);
@@ -9,6 +12,24 @@ a:link {
 a:visited {
   color: light-dark(purple, mediumpurple);
 }
+body {
+  padding: 0 10%;
+}
+@media screen and (width <= 50em) {/*小さい画面でだけ適用される*/
+  body {
+    padding: 0;
+  }
+}
+hr {
+  width: 90%;
+}
+p {
+  text-indent: 1em;
+  margin: 0;
+}
+
+/*-----------------ヘッダー------------------------*/
+
 ul.breadcrumb {
   display: flex;/*隙間なく詰める*/
   overflow-x: auto;
@@ -27,33 +48,43 @@ div.site-name {
   font-size: 2em;
   font-weight: bold;
 }
-body {
-  padding: 0 10%;
-}
-@media screen and (width <= 50em) {/*小さい画面でだけ適用される*/
-  body {
-    padding: 0;
-  }
-}
-hr {
-  width: 90%;
-}
+
+/*-------------------箇条書きしまうやつ-------------------------*/
+
 ul.contents-details {
   list-style: none;
   padding-left: 1.5em;
 }
-p {
-  text-indent: 1em;
-  margin: 0;
-}
-a[target=_blank] {
+
+/*-------------------------リンクに画像出すやつ--------------------------------*/
+
+a.external-link {
   padding-right: 1em;
-	background: light-dark(url(/images/external-link.svg), url(/images/external-link-dark.svg)) right/1em no-repeat;
+	background-image: light-dark(url(/images/external-link.svg), url(/images/external-link-dark.svg));
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 1em;
 }
 a.pdf {
   padding-right: 1em;
-  background: light-dark(url(/images/pdf.svg), url(/images/pdf-dark.svg)) right/1em no-repeat;
+  background-image: light-dark(url(/images/pdf.svg), url(/images/pdf-dark.svg));
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 1em;
 }
+
+/*----------------------コード---------------------------------*/
+
+code {
+  background-color: #eeeeee;
+  border-radius: 3px;
+  font-family: "Courier New", monospace;
+  padding: 0 0.2em;
+  margin: 0 0.2em;
+}
+
+/*---------------------------テスト用----------------------------------*/
+
 .test {
   border: 1px dashed blue;
 }
