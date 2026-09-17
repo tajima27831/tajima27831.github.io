@@ -36,7 +36,7 @@ ul.breadcrumb {
   list-style: none;/*箇条書きの丸を表示しない*/
   padding: 0;
   margin: 0.5em 0;
-  text-wrap-mode: nowrap;/*flexで詰めるliが改行しない*/
+  text-wrap-mode: nowrap;/*liの中で改行しない*/
 }
 .breadcrumb li:not(:last-child)::after {/*最後のliでないなら、liの後に"/"を挿入*/
   margin: 0 0.5em;
@@ -65,6 +65,13 @@ a.external-link {
   background-repeat: no-repeat;
   background-size: 1em;
 }
+a.pdf {
+  padding-right: 1em;
+  background-image: url(/resources/images/pdf.svg);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 1em;
+}
 @media (prefers-color-scheme: dark){/*本当はlight-dark関数で書きたかったが、iPhoneのsafariでうまくいかなかった*/
   a.external-link {
     padding-right: 1em;
@@ -73,15 +80,6 @@ a.external-link {
     background-repeat: no-repeat;
     background-size: 1em;
   }
-}
-a.pdf {
-  padding-right: 1em;
-  background-image: url(/resources/images/pdf.svg);
-  background-position: right;
-  background-repeat: no-repeat;
-  background-size: 1em;
-}
-@media (prefers-color-scheme: dark){
   a.pdf {
     padding-right: 1em;
     background-image: url(/resources/images/pdf-dark.svg);
