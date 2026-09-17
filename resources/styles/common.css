@@ -60,7 +60,7 @@ ul.contents-details {
 
 a.external-link {
   padding-right: 1em;
-  background-image: url(/images/external-link.svg);
+  background-image: url(/resources/images/external-link.svg);
   background-position: right;
   background-repeat: no-repeat;
   background-size: 1em;
@@ -68,7 +68,7 @@ a.external-link {
 @media (prefers-color-scheme: dark){/*本当はlight-dark関数で書きたかったが、iPhoneのsafariでうまくいかなかった*/
   a.external-link {
     padding-right: 1em;
-    background-image: url(/images/external-link-dark.svg);
+    background-image: url(/resources/images/external-link-dark.svg);
     background-position: right;
     background-repeat: no-repeat;
     background-size: 1em;
@@ -76,7 +76,7 @@ a.external-link {
 }
 a.pdf {
   padding-right: 1em;
-  background-image: url(/images/pdf.svg);
+  background-image: url(/resources/images/pdf.svg);
   background-position: right;
   background-repeat: no-repeat;
   background-size: 1em;
@@ -84,7 +84,7 @@ a.pdf {
 @media (prefers-color-scheme: dark){
   a.pdf {
     padding-right: 1em;
-    background-image: url(/images/pdf-dark.svg);
+    background-image: url(/resources/images/pdf-dark.svg);
     background-position: right;
     background-repeat: no-repeat;
     background-size: 1em;
