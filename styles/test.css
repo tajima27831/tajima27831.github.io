@@ -60,20 +60,13 @@ ul.contents-details {
 
 a.external-link {
   padding-right: 1em;
-	background-image: light-dark(url(/images/external-link.svg), url(/images/external-link-dark.svg));
-  background-position: right;
-  background-repeat: no-repeat;
-  background-size: 1em;
-}
-a.external-link-test {
-  padding-right: 1em;
 	background-image: url(/images/external-link.svg);
   background-position: right;
   background-repeat: no-repeat;
   background-size: 1em;
 }
-@media (prefers-color-scheme: dark){
-  a.external-link-test {
+@media (prefers-color-scheme: dark){/*本当はlight-dark関数で書きたかったが、iPhoneのsafariでうまくいかなかった*/
+  a.external-link {
     padding-right: 1em;
 	  background-image: url(/images/external-link-dark.svg);
     background-position: right;
@@ -83,10 +76,19 @@ a.external-link-test {
 }
 a.pdf {
   padding-right: 1em;
-  background-image: light-dark(url(/images/pdf.svg), url(/images/pdf-dark.svg));
+	background-image: url(/images/pdf.svg);
   background-position: right;
   background-repeat: no-repeat;
   background-size: 1em;
+}
+@media (prefers-color-scheme: dark){
+  a.external-link {
+    padding-right: 1em;
+	  background-image: url(/images/pdf-dark.svg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 1em;
+  }
 }
 
 /*----------------------コード---------------------------------*/
