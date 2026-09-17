@@ -3,8 +3,8 @@
 
 :root {
   color-scheme: light dark;
-  color: light-dark(black, gainsboro);
-  background-color: light-dark(white, black);
+  color: light-dark(#141414, gainsboro);
+  background-color: light-dark(white, #141414);
 }
 a:link {
   color: light-dark(blue, royalblue);
@@ -67,10 +67,19 @@ a.external-link {
 }
 a.external-link-test {
   padding-right: 1em;
-	background-image: url(/images/external-link-dark.svg);
+	background-image: url(/images/external-link.svg);
   background-position: right;
   background-repeat: no-repeat;
   background-size: 1em;
+}
+@media (prefers-color-scheme: dark){
+  a.external-link-test {
+    padding-right: 1em;
+	  background-image: url(/images/external-link-dark.svg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 1em;
+  }
 }
 a.pdf {
   padding-right: 1em;
