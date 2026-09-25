@@ -44,13 +44,17 @@
 
       <section id="progress-log">
         <h2>開発過程</h2>
-        <p>すべてのテキストはブロックコンテンツのいずれか（div section main nav）に入る。直上のブロックコンテンツが、そのテキストの内容を説明する。</p>
       </section>
 
       <section id="specification">
         <h2>仕様</h2>
+        <section id="html">
+          <h3>出力されるHTML構造のルール</h3>
+          <p>すべてのテキストはブロックコンテンツのいずれか（<code class="code-html">&lt;main&gt;</code>、<code class="code-html">&lt;section&gt;</code>、<code class="code-html">&lt;nav&gt;</code>、<code class="code-html">&lt;div&gt;</code>）のいずれかに入る。すべてのブロックコンテンツには、入れ子構造に応じて一つだけ見出し（<code class="code-html">&lt;h1&gt;</code>から<code class="code-html">&lt;h4&gt;</code>）が置かれる。直上のブロックコンテンツが、そのテキストの内容を説明する。</p>
+        </section>
+
         <p>HTMLファイルのファイル名を一つの項目とし、ファイル名の項目の中にメタデータを<code class="code-workflowy">;</code>によって分けて書く。メタデータはtitleとdescriptionの二つ。</p>
-        <p>ファイル名の子孫の項目がそのファイルの中身となる。ファイル名の直下が<code class="code-html">&lt;main&gt;</code>要素となり、まず<code class="code-html">&lt;h1&gt;</code>が&lt;h1&gt;がtitleによって作られる。</p>
+        <p>ファイル名の子孫の項目がそのファイルの中身となる。ファイル名の直下が<code class="code-html">&lt;main&gt;</code>要素となり、まず<code class="code-html">&lt;h1&gt;</code>がtitleによって作られる。</p>
       </section>
     </main>
 
