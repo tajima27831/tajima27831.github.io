@@ -3,7 +3,7 @@ name: check diff
 on:
   push:
     paths:
-        - '**.md'
+        - '**/source.md'
 
 permissions:
   contents: write
