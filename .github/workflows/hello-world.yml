@@ -1,8 +1,0 @@
-name: HelloWorld                 # ワークフローの名前
-on: push                         # ワークフローが動作するトリガー、この記載ではpushしたときに動作する
-jobs:                            # jobの定義
-  hello-world:                   # jobのID
-    runs-on: ubuntu-latest       # ランナー（ジョブが動作するDocker Image）、今回はubuntuの最新のイメージを利用
-    steps:                       # ここからjobの中で実行されるコマンドですよーという意味
-      - name: Hello World        # stepは一つ一つ名前がつけることができます（つけておくとどこで失敗したのかがわかりやすくなります）
-        run: echo "Hello World"  # 実行されるコマンド、echoでHello Worldを表示

@@ -1,0 +1,66 @@
+name: check diff
+
+on:
+  push:
+    paths:
+        - '**.md'
+
+permissions:
+  contents: write
+
+env:
+  BASE_DIR: "./"
+
+jobs:
+  foo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+    
+      - name: Check Files
+        run: |
+          git fetch origin "${{ github.event.before }}" --depth=1
+
+          TARGETS=$(git diff -z --name-only --diff-filter=ACMR "${{ github.event.before }}.." -- '*.md'| tr '\0' '\n')
+
+          echo "=== Detected Target Files ==="
+          if [ -z "${TARGETS}" ]; then
+            echo "No matching changed files found."
+          else
+            echo "${TARGETS}"
+          fi
+          echo "============================="
+
+          printf "TARGETS<<EOF\n%s\nEOF\n" "${TARGETS}" >> $GITHUB_ENV
+
+      - name: Setup Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.14'
+
+      - name: Run Script for Each File
+        run: |
+          if [ -z "${TARGETS}" ]; then
+            echo "No target files to process."
+            exit 0
+          fi
+
+          echo "${TARGETS}" | while IFS= read -r file; do
+            [ -z "$file" ] && continue
+
+            echo "=== Executing: resources/scripts/test.py $file ==="
+            python scripts/test.py "$file"
+          done
+
+      - name: Git Push
+        run: |
+          git config --local user.email "github-actions[bot]@://github.com"
+          git config --local user.name "github-actions[bot]"
+          git add .
+          if ! git diff --cached --exit-code --quiet; then
+            git commit -m "chore: auto-update output.txt via GitHub Actions"
+            git push
+          else
+            echo "No changes detected. Skipping commit."
+          fi
