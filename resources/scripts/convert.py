@@ -180,8 +180,6 @@ with open(source_file_path, mode="r", encoding="utf-8") as source:
             sys.exit(1)
 
         #-----------------------------メイン---------------------------------------------
-        # 各行を読んで本文をリストに収めながら、headerに目次を書き込んでいく。
-        # 一番下まで行ったらリストを書き込み、最後にフッターを足す。
 
         striped_line = line.strip()
         striped_line = striped_line[2:]
