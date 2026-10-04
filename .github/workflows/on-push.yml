@@ -50,7 +50,7 @@ jobs:
             [ -z "$file" ] && continue
 
             echo "=== Executing: resources/scripts/convert.py $file ==="
-            python scripts/test.py "$file"
+            python resouces/scripts/convert.py "$file"
           done
 
       - name: Git Push
@@ -59,7 +59,7 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add .
           if ! git diff --cached --exit-code --quiet; then
-            git commit -m "chore: auto-update output.txt via GitHub Actions"
+            git commit -m "converting $file via GitHub Actions"
             git push
           else
             echo "No changes detected. Skipping commit."
