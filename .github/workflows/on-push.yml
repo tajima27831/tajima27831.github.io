@@ -50,7 +50,7 @@ jobs:
             [ -z "$file" ] && continue
 
             echo "=== Executing: resources/scripts/convert.py $file ==="
-            python resouces/scripts/convert.py "$file"
+            python resources/scripts/convert.py "$file"
           done
 
       - name: Git Push
