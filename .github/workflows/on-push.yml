@@ -49,7 +49,7 @@ jobs:
           echo "${TARGETS}" | while IFS= read -r file; do
             [ -z "$file" ] && continue
 
-            echo "=== Executing: resources/scripts/test.py $file ==="
+            echo "=== Executing: resources/scripts/convert.py $file ==="
             python scripts/test.py "$file"
           done
 
