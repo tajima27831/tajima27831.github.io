@@ -63,7 +63,7 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add .
           if ! git diff --cached --exit-code --quiet; then
-            git commit -m "converting $file via GitHub Actions"
+            git commit -m "Generate index.html via GitHub Actions"
             git push
           else
             echo "No changes detected. Skipping commit."
