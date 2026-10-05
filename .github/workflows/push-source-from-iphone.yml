@@ -36,7 +36,7 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add .
           if ! git diff --cached --exit-code --quiet; then
-            git commit -m "chore: auto-update output.txt via GitHub Actions"
+            git commit -m "update $FILENAME from iPhone"
             git push
           else
             echo "No changes detected. Skipping commit."
