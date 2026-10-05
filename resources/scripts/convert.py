@@ -1,6 +1,7 @@
 from pathlib import Path
 import sys
 import datetime
+from zoneinfo import ZoneInfo
 
 #-----------------------------準備-----------------------------------
 
@@ -19,7 +20,7 @@ if not source_file_path.exists():
     #fはpath型をstring型に自動で変えるために必要
     sys.exit(1)
 
-today = datetime.date.today()
+today = datetime.datetime.now(ZoneInfo("Asia/Tokyo")).date()
 
 nest_stack = [] # ネスト
 
