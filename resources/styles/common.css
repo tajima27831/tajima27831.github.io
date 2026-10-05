@@ -97,6 +97,7 @@ code {
   font-family: "Courier New", monospace;
   padding: 0 0.2em;
   margin: 0 0.2em;
+  overflow-wrap: anywhere;
 }
 
 /*---------------------------テスト用----------------------------------*/
