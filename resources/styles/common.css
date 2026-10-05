@@ -102,7 +102,7 @@ code {
 
 /* code の直前での改行を禁止 */
 code::before {
-  content: "\2060";
+  content: "&#8288;";
 }
 
 
