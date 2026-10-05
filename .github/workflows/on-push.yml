@@ -2,7 +2,7 @@ name: Generate HTML
 
 on:
   workflow_run:
-    workflows: [Prepare Source of Diary]
+    workflows: [Push File from Shortcut]
     types:
       - completed
   push:
