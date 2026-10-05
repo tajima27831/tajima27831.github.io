@@ -12,21 +12,18 @@ on:
 permissions:
   contents: write
 
-env:
-  BASE_DIR: "./"
-
 jobs:
   prepare:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 2
     
       - name: Check Files
         run: |
-          git fetch origin "${{ github.event.before }}" --depth=3
-
-          TARGETS=$(git diff -z --name-only --diff-filter=ACMR "${{ github.event.before }}.." -- '**/diary.md'| tr '\0' '\n')
+          TARGETS=$(git diff --name-only --diff-filter=ACMR HEAD~1 HEAD -- '**/diary.md')
 
           echo "=== Detected Target Files ==="
           if [ -z "${TARGETS}" ]; then
