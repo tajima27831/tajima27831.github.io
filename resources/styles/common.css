@@ -97,8 +97,7 @@ code {
   font-family: "Courier New", monospace;
   padding: 0 0.2em;
   margin: 0 0.2em;
-  word-break: break-all;
-  display: inline;
+  word-break: break-all; /* overflow-wrap: anywhere;ではダメ*/
 }
 
 
