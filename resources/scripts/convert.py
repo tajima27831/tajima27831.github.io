@@ -13,6 +13,8 @@ source_file_path = Path(sys.argv[1])
 directory_path_list = sys.argv[1].split("/")[:-1]#一番最後の空stringを削除したリスト
 path_length = len(directory_path_list)#ホームを含まない
 
+print(directory_path_list)
+
 index_file_path = Path("/".join(directory_path_list) + "/index.html")
 
 if not source_file_path.exists():
