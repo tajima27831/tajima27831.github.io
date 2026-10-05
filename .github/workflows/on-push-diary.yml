@@ -1,6 +1,10 @@
 name: Prepare Source of Diary
 
 on:
+  workflow_run:
+    workflows: [Push File from Shortcut]
+    types:
+      - completed
   push:
     paths:
         - '**/diary.md'
@@ -20,13 +24,14 @@ jobs:
     
       - name: Check Files
         run: |
-          git fetch origin "${{ github.event.before }}" --depth=1
+          git fetch origin "${{ github.event.before }}" --depth=3
 
           TARGETS=$(git diff -z --name-only --diff-filter=ACMR "${{ github.event.before }}.." -- '**/diary.md'| tr '\0' '\n')
 
           echo "=== Detected Target Files ==="
           if [ -z "${TARGETS}" ]; then
             echo "No matching changed files found."
+            exit 0
           else
             echo "${TARGETS}"
           fi
