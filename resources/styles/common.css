@@ -97,12 +97,7 @@ code {
   font-family: "Courier New", monospace;
   padding: 0 0.2em;
   margin: 0 0.2em;
-  overflow-wrap: anywhere;
-}
-
-/* code の直前での改行を禁止 */
-code::before {
-  content: "&#8288;";
+  word-break: break-all;
 }
 
 
