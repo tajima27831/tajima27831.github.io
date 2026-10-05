@@ -1,0 +1,43 @@
+name: Push File from Shortcut
+
+on:
+  workflow_dispatch:
+    inputs:
+      filename:
+        description: '**/source.mdの形'
+        required: true
+        type: string
+      content:
+        description: 'base64形式のテキスト'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  commit-file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Create File Safely
+        env:
+          FILENAME: ${{ github.event.inputs.filename }}
+          CONTENT_B64: ${{ github.event.inputs.content }}
+        run: |
+          mkdir -p "$(dirname "$FILENAME")"
+          echo "$CONTENT_B64" | base64 -d > "$FILENAME"
+          
+      - name: Git Push
+        run: |
+          git config --local user.email "github-actions[bot]@://github.com"
+          git config --local user.name "github-actions[bot]"
+          git add .
+          if ! git diff --cached --exit-code --quiet; then
+            git commit -m "chore: auto-update output.txt via GitHub Actions"
+            git push
+          else
+            echo "No changes detected. Skipping commit."
+          fi
