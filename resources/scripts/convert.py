@@ -72,7 +72,7 @@ head_2 = [
 header_1 = [
     "  <body>",
     "    <header>",
-    "      <div class=\"site-name\">強迫的敗北主義反芻派</div>",
+    "      <div class=\"site-name\">今それどころじゃない</div>",
     "",
     "      <hr>",
     ""
@@ -153,7 +153,7 @@ with open(source_file_path, mode="r", encoding="utf-8") as source:
 
             head_metadata = [
                 "    <meta name=\"description\" content=\"" + description + "\"/>",
-                "    <title>" + title + "｜強迫的敗北主義反芻派</title>"
+                "    <title>" + title + "｜今それどころじゃない</title>"
             ]
 
             header_breadcrumb.append("      <nav aria-label=\"Breadcrumb\">")
@@ -233,7 +233,7 @@ with open(source_file_path, mode="r", encoding="utf-8") as source:
         #-----------------------------------本文か箇条書きの項目------------------------------------
         # あとでここにリンクの置換による記法を追加
         if (len(nest_stack) > 0 and nest_stack[-1] == "u"):
-            main.append(indent_list[len(nest_stack)+4] + "<li>" + striped_line + "</li>")
+            main.append(indent_list[len(nest_stack)+3] + "<li>" + striped_line + "</li>")
         else:
             main.append(indent_list[len(nest_stack)+3] + "<p>" + striped_line + "</p>")
 

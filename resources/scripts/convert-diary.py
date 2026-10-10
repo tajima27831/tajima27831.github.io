@@ -37,7 +37,7 @@ head_2 = [
 header_1 = [
     "  <body>",
     "    <header>",
-    "      <div class=\"site-name\">強迫的敗北主義反芻派</div>",
+    "      <div class=\"site-name\">今それどころじゃない</div>",
     "",
     "      <hr>",
     ""
