@@ -134,6 +134,7 @@ with open(source_file_path, mode="r", encoding="utf-8") as source:
             for i in range(path_length):
                 if not directory_path_from_source_list[i+1] == directory_path_list[i]:
                     print("pathが合いません")
+                    print(directory_path_from_source_list)
                     sys.exit(1)
             continue
 
@@ -148,6 +149,7 @@ with open(source_file_path, mode="r", encoding="utf-8") as source:
             title = title_list[path_length]
             if not len(title_list) == path_length+1:
                 print("日本語タイトルの数が合いません")
+                print(title_list)
                 sys.exit(1)
             description = metadata[2].strip() # 最後の開業文字を削除
 
@@ -171,20 +173,29 @@ with open(source_file_path, mode="r", encoding="utf-8") as source:
             continue
 
         if not line[0] == " ":
-            print(line)
             print("mdファイルの異常")
+            print(line)
             sys.exit(1)
 
-        #-----------------------------メイン---------------------------------------------
+        #-----------------------------mdの四行目以降---------------------------------------------
 
         striped_line = line.strip()
-        striped_line = striped_line[2:]
+        striped_line = striped_line[2:] # 冒頭の空白とハイフンを除いた文字列
+        indent_number_from_line = line.split("-")[0].count("  ") # インデントの深さ
 
-        #------------------------------見出しか箇条書き--------------------------------
+        if not len(nest_stack)+1 == indent_number_from_line: # 箇条書きか引用を閉じる セクションを閉じるのは新しいセクションを始めるときだけ
+            if nest_stack[-1] == "u": # 箇条書きを閉じる
+                main.append(indent_list[len(nest_stack)+2] + "</ul>")
+                del nest_stack[-1:]
+            if (nest_stack[-1] == "q"): # 引用を閉じる
+                # 引用を実装したら書く
+                del nest_stack[-1:]
+
+        #------------------------------見出しか箇条書きか引用--------------------------------
         if striped_line[0] == ":":
-            if len(striped_line.split(":")) > 3:
-                print(striped_line)
+            if len(striped_line.split(":")) > 4:
                 print("md内での構文ミス")
+                print(striped_line)
                 sys.exit(1)
             #------------------------------箇条書き----------------------------------
             if len(striped_line.split(":")) == 2:
@@ -192,12 +203,13 @@ with open(source_file_path, mode="r", encoding="utf-8") as source:
                 main.append(indent_list[len(nest_stack)+2] + "<ul>")
                 continue
 
+            #--------------------------------引用---------------------------------------
+            if len(striped_line.split(":")) == 4:
+                nest_stack.append("q")
+                # 後で書く
+
             #--------------------------------見出し-----------------------------------
-            if len(striped_line.split(":")) == 3:
-                if (len(nest_stack) > 0 and nest_stack[-1] == "u"): # 箇条書きを閉じる
-                    main.append(indent_list[len(nest_stack)+2] + "</ul>")
-                    del nest_stack[-1:]
-                
+            if len(striped_line.split(":")) == 3:                
                 section_title = striped_line.split(":")[1]
                 section_id = striped_line.split(":")[2]
                 if not len(section_id.split("/"))*2 == len(line.split(":")[0])-2:
@@ -231,14 +243,15 @@ with open(source_file_path, mode="r", encoding="utf-8") as source:
             continue
 
         #-----------------------------------本文か箇条書きの項目------------------------------------
-        # あとでここにリンクの置換による記法を追加
         if (len(nest_stack) > 0 and nest_stack[-1] == "u"):
             main.append(indent_list[len(nest_stack)+3] + "<li>" + striped_line + "</li>")
-        else:
+        if (len(nest_stack) > 0 and nest_stack[-1] == "s"):
             main.append(indent_list[len(nest_stack)+3] + "<p>" + striped_line + "</p>")
+        if (len(nest_stack) > 0 and nest_stack[-1] == "q"):
+            main.append(indent_list[len(nest_stack)+3] + striped_line + "\n") # 後で書く
 
 #-------------------------------------------メインの最後にタグを閉じる------------------------
-while 0 < len(nest_stack): # ネストを同じ深さ以下にする
+while 0 < len(nest_stack):
     if (len(nest_stack) > 0 and nest_stack[-1] == "u"): # 箇条書きを閉じる
         main.append(indent_list[len(nest_stack)+2] + "</ul>")
         del nest_stack[-1:]
