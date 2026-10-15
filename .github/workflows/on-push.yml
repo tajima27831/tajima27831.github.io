@@ -2,7 +2,7 @@ name: Generate HTML
 
 on:
   workflow_run:
-    workflows: [Push File from Shortcut]
+    workflows: [Push Source File from Shortcut]
     types:
       - completed
   push:
